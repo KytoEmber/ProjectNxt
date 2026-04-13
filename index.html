@@ -1526,53 +1526,86 @@ option { background: var(--bg3); }
       <p class="ab-quote">"Built with fire, for those who refuse to give up. <strong>Your exam day is coming — be ready.</strong>"</p>
     </div>
 
-    <!-- About section -->
-    <div class="about-section">
-      <h3>🎓 About This App</h3>
-      <p>Built specifically for NU BBA Commerce Unit admission test preparation. Covers all 5 subjects: বাংলা, English, General Knowledge, Accounting, and Management — with 500+ MCQs based on HSC 2025 syllabus and past admission patterns (NU, DU, JnU).</p>
-      <div class="ab-stat-row">
-        <div class="ab-stat"><div class="ab-sv" id="aboutTotalQ">500+</div><div class="ab-sl">MCQs</div></div>
-        <div class="ab-stat"><div class="ab-sv">5</div><div class="ab-sl">Subjects</div></div>
-        <div class="ab-stat"><div class="ab-sv" id="aboutHistCount">0</div><div class="ab-sl">Tests Taken</div></div>
+    <!-- ══ ABOUT PANEL ══ -->
+<div class="panel" id="panel-about">
+  <div class="about-wrap-main">
+
+    <!-- Lead Dev — TOP -->
+    <div class="dev-card">
+      <div class="dev-top">
+        <div class="dev-avatar-wrap">
+          <img src="https://github.com/KytoEmber.png" id="devAvatarImg" class="dev-avatar"
+            onerror="this.style.display='none'"
+            onmousedown="AdminFeature.startHold(event)"
+            onmouseup="AdminFeature.endHold()"
+            onmouseleave="AdminFeature.endHold()"
+            ontouchstart="AdminFeature.startHold(event);event.preventDefault()"
+            ontouchend="AdminFeature.endHold()"
+            style="user-select:none;-webkit-user-drag:none;cursor:pointer" />
+          <div id="adminHoldBar" class="admin-hold-progress"></div>
+        </div>
+        <div>
+          <div class="dev-name">Waterflame</div>
+          <div class="dev-role">Lead Developer</div>
+        </div>
       </div>
+      <div class="dev-socials">
+        <a href="https://github.com/KytoEmber" target="_blank">🐈‍⬛</a>
+        <a href="https://www.facebook.com/Waterflame.abdullah" target="_blank">ⓕ Facebook </a>
+      </div>
+      <button class="dev-btn" onclick="window.open('https://buymeacoffee.com/waterflame','_blank')">☕ Buy me a coffee</button>
+    </div>
+
+    <!-- Assistant Dev -->
+    <div class="dev-card dev-small">
+      <div class="dev-top">
+        <img src="https://github.com/lazywilin.png" class="dev-avatar" onerror="this.style.display='none'" />
+        <div>
+          <div class="dev-name">Lazywilin</div>
+          <div class="dev-role">Senior Software Engineer</div>
+        </div>
+      </div>
+      <div class="dev-socials">
+        <a href="https://github.com/lazywilin" target="_blank">🐈‍⬛</a>
+        <a href="https://instagram.com/lazywilin" target="_blank">🅾 𝐈𝐧𝐬𝐭𝐚𝐠𝐫𝐚𝐦</a>
+      </div>
+       <button class="dev-btn" onclick="window.open('https://buymeacoffee.com/lazywilin','_blank')">☕ Buy me a coffee</button>
     </div>
 
     <!-- Changelog -->
     <div class="changelog-section">
       <h3>📋 Changelog</h3>
-      <div class="cl-version">v8.0 — 2026-04-13</div>
-      <div class="cl-item cl-new">Improved Focus Mode reliability with tab-switch detection & auto-end logic</div>
-      <div class="cl-item cl-new">Added Diamond Medal (95%+ in Competitive Mode)</div>
-      <div class="cl-item cl-new">Restricted answer picking (no changing once selected)</div>
-      <div class="cl-item cl-new">Added Exam Rules & Info modal for first-time users</div>
-      <div class="cl-item cl-fix">Updated developer profiles & fixed broken design elements</div>
-      <div class="cl-version" style="margin-top:.65rem">v7.3 — Previous</div>
-      <div class="cl-item cl-fix">Navbar layout fixed — logo always LEFT, buttons always RIGHT on all screen sizes</div>
-      <div class="cl-item cl-fix">About content was showing on Home page — fixed HTML structure</div>
-      <div class="cl-item cl-fix">Saved/Paused exams now resumable directly from History tab with clear UI</div>
-      <div class="cl-item cl-fix">About section info cards made more compact</div>
-      <div class="cl-item cl-new">Added "📋 Saved Exams" button in History tab header</div>
-      <div class="cl-item cl-new">Improved paused exams display with dedicated section and cleaner resume flow</div>
-      <div class="cl-item cl-new">Added Changelog section to About panel</div>
-    </div>
 
-    <div class="p-card" style="border-top-color:#60a5fa">
-      <img src="https://i.ibb.co/X7W7S26/image.png" alt="Dev" class="p-img" id="adminPhotoTrigger">
-      <div class="p-name">Waterflame ( Lead Dev )</div>
-      <div class="p-desc">Handles core architecture, engine logic, and database management. Ensuring a smooth experience. 💻🔥🛡️</div>
-      <div class="p-links">
-        <a href="#" class="p-link">GitHub</a>
-        <a href="#" class="p-link">Twitter</a>
-      </div>
-    </div>
-    <div class="p-card" style="border-top-color:#f87171">
-      <img src="https://i.ibb.co/3N3Y09k/image.png" alt="Dev" class="p-img">
-      <div class="p-name">lazywilin ( UI/UX Designer )</div>
-      <div class="p-desc">Designs the visual language and overall user experience of the platform. Focuses on aesthetics and flow. 🎨✨💻</div>
-      <div class="p-links">
-        <a href="https://github.com" class="p-link">GitHub</a>
-        <a href="https://instagram.com" class="p-link">Instagram</a>
-      </div>
+      <div class="cl-version">v8.1 — 2026-04-13 (Current)</div>
+      <div class="cl-item cl-fix">Fixed Few Text Errors And Link Errors </div>
+      
+      <div class="cl-version">v8.0 — 2026-04-13</div>
+      <div class="cl-item cl-fix">Focus Mode completely rewritten — proper event listener binding prevents duplicate/stale listeners across exam sessions</div>
+      <div class="cl-item cl-fix">App navigation now blocks tab-switching during active exams — shows Focus Mode warning instead of silently switching</div>
+      <div class="cl-item cl-fix">Answers are now permanently locked once picked — cannot be changed after selection in all difficulty modes</div>
+      <div class="cl-item cl-fix">Platinum medal fixed — only counts streaks in Competitive mode; description updated after unlocking</div>
+      <div class="cl-item cl-new">Exam Rules modal added — shown first time only, explains timers, answer locking, Focus Mode, and scoring</div>
+      <div class="cl-item cl-new">Post-exam result overlay now shows performance tab immediately after finishing with medal, grade and stats</div>
+
+      <div class="cl-version" style="margin-top:.65rem">v7.4 — 2026-04-12</div>
+      <div class="cl-item cl-fix">About page restructured — developer cards at top</div>
+      <div class="cl-item cl-fix">Save &amp; Resume exam feature removed entirely</div>
+      <div class="cl-item cl-fix">FocusMode simplified and cleaned</div>
+      <div class="cl-item cl-new">Bangla chapters extended — 30–40 MCQs each</div>
+
+      <div class="cl-version" style="margin-top:.65rem">v7.3 — 2026-04-11</div>
+      <div class="cl-item">Per-question countdown timer added</div>
+      <div class="cl-item">Medal & Achievement system with confetti</div>
+      <div class="cl-item">Focus Mode tab-switch detection</div>
+
+      <div class="cl-version" style="margin-top:.65rem">v6.0 — 2026-04-10</div>
+      <div class="cl-item">Easy/Medium/Competitive difficulty modes</div>
+      <div class="cl-item">Exam Mode with full result overlay and review</div>
+      <div class="cl-item">Test history with localStorage persistence</div>
+
+      <div class="cl-version" style="margin-top:.65rem">v5.0 — Earlier</div>
+      <div class="cl-item">Initial full release — 5 subjects, 600+ MCQs</div>
+      <div class="cl-item">Practice Mode, reading mode, countdown timer</div>
     </div>
 
   </div>
